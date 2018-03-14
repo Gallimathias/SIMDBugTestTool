@@ -16,9 +16,9 @@ namespace SIMD.TestTool
             else
                 Console.WriteLine("Test is for 32 Bit");
 
-            Console.WriteLine("Run Test (direct casting)");
+            Console.Write("Run Test (direct casting)");
             Test();
-            Console.WriteLine("Run Test B (casting with additional var)");
+            Console.Write("Run Test B (casting with additional var)");
             TestB();
 
             Console.ReadLine();
@@ -29,9 +29,9 @@ namespace SIMD.TestTool
             var value = new Vector3(0, 0, -41);
             var a = *(System.Numerics.Vector3*)(&value);
             if (value.X == a.X && value.Y == a.Y && value.Z == a.Z)
-                Console.WriteLine("Test is ok");
+                Console.WriteLine(".....Test is ok");
             else
-                Console.WriteLine("Test fail");
+                Console.WriteLine(".....Test fail");
         }
 
         static unsafe void TestB()
@@ -40,9 +40,9 @@ namespace SIMD.TestTool
             var d = &value;
             var a = *(System.Numerics.Vector3*)d;
             if (value.X == a.X && value.Y == a.Y && value.Z == a.Z)
-                Console.WriteLine("Test is ok");
+                Console.WriteLine(".....Test is ok");
             else
-                Console.WriteLine("Test fail");
+                Console.WriteLine(".....Test fail");
         }
     }
 }
